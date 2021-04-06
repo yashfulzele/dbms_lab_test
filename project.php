@@ -25,6 +25,7 @@
                 $qq    .= "INSERT INTO `P_skills` (`p_id`, `skills`) VALUES ('$p_id', '$skills_arr[$i]');";
             }
             $res2       = mysqli_multi_query($conn, $qq);
+            $_COOKIE['p_id'] = $p_id;
             header("location: search_free.php");
         }
     }
